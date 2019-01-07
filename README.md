@@ -31,7 +31,18 @@ In `prep_pipeline.py` on line 98:
 
 feats can be either `text` for avgw2v representation of the tweets or `SemEvalfeatures` for additional extra features concatenated with avgw2v. 
 
-5. Run preprocessing script
+5. Download necessary nltk packages, if they have not been downloaded.
+
+In Python interactive interpreter, input the following commands:
+
+```
+import nltk
+
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+```
+
+6. Run preprocessing script
 
 ```
 python prep_pipeline.py
@@ -46,7 +57,13 @@ The features used in this code are different to the ones used in the paper.
 
 2. In `parameter_search.py` you can define search_space.
 
-3. Run the baseline
+3. Make sure `output/` folder has been created
+
+```
+mkdir output
+```
+
+4. Run the baseline
 
 ```
 python outer_semeval2019.py
