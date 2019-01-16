@@ -23,7 +23,7 @@ def loadW2vModel():
     global model_GN
     print ("Loading the model")
     model_GN = gensim.models.KeyedVectors.load_word2vec_format(
-                    '/Users/Helen/Documents/PhD/Pre-trained WORD2VEC/GoogleNews-vectors-negative300.bin', binary=True)
+                    'C:/prog/GoogleNews-vectors-negative300.bin', binary=True)
     print ("Done!")
 
 def sumw2v(tweet, avg=True):

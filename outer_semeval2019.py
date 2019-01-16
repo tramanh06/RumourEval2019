@@ -62,7 +62,8 @@ def convertsave_competitionformat(idsA, predictionsA, idsB, predictionsB, confid
 #%%
 print ('Rumour Stance classification')
 
-ntrials = 50
+# ntrials = 50
+ntrials = 1
 task = 'stance'
 params, trials = parameter_search(ntrials, objective_function_stance_branchLSTM_RumEv, task)
 #%%
@@ -74,7 +75,8 @@ dev_result_label =trials.attachments["ATTACH::%d::Labels" % best_trial_id]
 
 #%%
 print ('Rumour Veracity classification') 
-ntrials = 50
+# ntrials = 50
+ntrials = 1
 task = 'veracity'
 params, trials = parameter_search(ntrials, objective_function_veracity_branchLSTM_RumEv, task)
 #%%

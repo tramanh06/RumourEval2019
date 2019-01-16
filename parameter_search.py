@@ -32,11 +32,11 @@ def parameter_search(ntrials, objective_function, task):
     
     bp = trials.best_trial['result']['Params']
     
-    f = open('output/trials_'+task+'.txt', "wb")
+    f = open('output/trials_'+task+'.hyperopt.pkl', "wb")
     pickle.dump(trials, f)
     f.close()
     
-    filename = 'output/bestparams_'+task+'.txt'
+    filename = 'output/bestparams_'+task+'.hyperopt.pkl'
     f = open(filename, "wb")
     pickle.dump(bp, f)
     f.close()
